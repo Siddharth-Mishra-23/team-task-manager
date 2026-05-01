@@ -3,8 +3,7 @@ services:
     name: team-task-manager-backend
     runtime: docker
     rootDir: backend
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/backend-0.0.1-SNAPSHOT.jar"
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DATABASE_URL
         fromDatabase:
